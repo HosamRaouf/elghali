@@ -22,7 +22,11 @@ jobs:
         run: flutter pub get
         
       - name: Build Web
-        run: flutter build web --release --base-href "/elghali/"
+        run: flutter build web --release --base-href "/elghali/" --web-renderer html
+
+      - name: Verify Build
+        run: |
+          ls -R build/web/assets || echo "No assets found"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
