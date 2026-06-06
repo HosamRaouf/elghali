@@ -23,6 +23,13 @@ class AdminLogin extends StatelessWidget {
               decoration: BoxDecoration(
                 color: const Color(0xFF0A0400),
                 borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.primary.withValues(alpha: 0.08),
+                    blurRadius: 40,
+                    spreadRadius: 2,
+                  ),
+                ],
                 border: Border.all(
                   color: AppColors.primary.withValues(alpha: 0.15),
                 ),
